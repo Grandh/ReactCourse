@@ -26,16 +26,16 @@ React native: 移动端原生程序
 7. Istanbul：覆盖率<br>
 
 ### JSX
-js语法增强-ES6可以直接放入HTML    
-需要babel编译JSX     
-**坑1**
+- js语法增强-ES6可以直接放入HTML    
+- 需要babel编译JSX          
+学习ES6语法规则与相关的编译原理    
+1. JSX 只能有一个顶级元素（一个父元素）   
+2. 模板字符串 es6 abc${xxx}    
+### 要填的坑
 ```
 npm install Bower   
 bower install babel    
 ```
-学习ES6语法规则与相关的编译原理    
-1. JSX 只能有一个顶级元素（一个父元素）   
-2. 模板字符串 es6 abc${xxx}    
 
 ## simple react-demo
 ```
