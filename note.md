@@ -2,7 +2,9 @@
 
 ## 简介
 - 前端三大框架：angular\vue\react   
-React来源：facebook       
+- angular 擅长输入、接管ui   
+  react 擅长组件化、状态管理   
+- React来源：facebook       
 
 __三个优点__     
 1. 组件化——分工、合作
@@ -26,27 +28,29 @@ React native: 移动端原生程序
 ### JSX
 js语法增强-ES6语法规则——HTML可以直接放入     
 需要编译 babel —— JSX     
-坑1：npm install Bower ; bower install babel
-bower_components -> 导入babel/browser.s
+**坑1**：npm install Bower ; bower install babel     
+bower_components -> 导入babel/browser.s     
 1. JSX 只能有一个顶级元素（一个父元素）
-2. 模板字符串 es6 abc${xxx}
-babel: var s = <dib>{aaa}</dib>
-atom babel(install plug-in)
------------
-第一个react
+2. 模板字符串 es6 abc${xxx}    
+babel: var s = <dib>{aaa}</dib>    
+atom babel(install plug-in)    
+
+## simple react-demo
+```
 javascript src: react react-dom browser
 <scirpt type="text/babel">
+class Demo extends React.Component{
+
+}
 ReactDom.render({
-return {}
+return <div>...</div>;
 })
 </script>
------------
+```
+### react特征
 状态是活的
 - constructor this.state={xxx}
-other this.setState()
+- other this.setState()
 - onChange(this.fn.bind(this) 语法较为严格、JSX需要编译
 - 绑定事件需要固定的格式
 - 用了constructor，必须用super构造
-
-angular 擅长输入、接管ui
-react 组件化、状态管理
