@@ -2,7 +2,7 @@
 
 ## 简介
 - 前端三大框架：angular\vue\react   
-- angular 擅长输入、接管ui   
+- angular 擅长输入、接管ui，但不能用原生Js/JQuery  
   react 擅长组件化、状态管理   
 - React来源：facebook       
 
@@ -26,20 +26,21 @@ React native: 移动端原生程序
 7. Istanbul：覆盖率<br>
 
 ### JSX
-js语法增强-ES6语法规则——HTML可以直接放入     
-需要编译 babel —— JSX     
-**坑1**：npm install Bower ; bower install babel     
-bower_components -> 导入babel/browser.s     
+js语法增强-ES6语法规则——HTML可以直接放入      
+需要编译 babel —— JSX      
+**坑1**：
+```npm install Bower   
+bower install babel ```    
+学习ES6语法规则与相关的编译原理    
 1. JSX 只能有一个顶级元素（一个父元素）
-2. 模板字符串 es6 abc${xxx}    
-babel: var s = <dib>{aaa}</dib>    
-atom babel(install plug-in)    
+2. 模板字符串 es6 abc${xxx}    
+
 
 ## simple react-demo
 ```
 javascript src: react react-dom browser
 <scirpt type="text/babel">
-class Demo extends React.Component{
+class Demo extends React.Component{ //注意组件名首字母必须uppercase
 
 }
 ReactDom.render({
@@ -48,9 +49,18 @@ return <div>...</div>;
 </script>
 ```
 ### react特征
-状态是活的
+__active state
 - constructor this.state={xxx}
 - other this.setState()
 - onChange(this.fn.bind(this) 语法较为严格、JSX需要编译
 - 绑定事件需要固定的格式
 - 用了constructor，必须用super构造
+
+#### React组件生存周期
+1. componentWillMount() 创建之前/正要挂载
+2. componentDidMount() 创建之后
+3. componentWillUpdate() 更新之前/正要更新
+4. componentDidUpdate() 更新之后
+5. componentWillUnmount() 卸载之前  
+__(没有didUnmount)__
+6. componentWillReceiveProps() 组件的参数已经更新
