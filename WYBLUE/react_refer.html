@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jquery+refs</title>
+		<script src="./js/browser.js" charset="utf-8"></script>
+		<script src="./js/react.development.js" charset="utf-8"></script>
+        <script src="./js/react-dom.development.js" charset="utf-8"></script>
+        <script src="./js/jquery.js" charset="utf-8"></script>
+		<script type="text/babel">
+
+			class DemoInput extends React.Component{
+
+				constructor(){
+					super(); //超类、父类
+				}
+				fn(){
+                    // var oS = this.refs['s1'];
+                    // oS.style.color='red';
+                    $(this.refs['s1']).css('color','red');
+				}
+				render(){ //高度面向对象
+					return <div>
+					<input type="button" value="click me" onClick={this.fn.bind(this)}/>
+					<span ref="s1">aaa</span>
+					</div>;
+				}
+			}
+			window.onload = function(){
+			var oDiv = document.getElementById('div1');
+				ReactDOM.render(
+				<DemoInput />,
+				oDiv
+				);
+			};
+		</script>
+
+	</head>
+	<body>
+		<div id="div1">
+		</div>
+	</body>
+</html>
+
+		
+
