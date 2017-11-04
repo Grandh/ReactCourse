@@ -49,6 +49,22 @@ return <div>...</div>;
 })
 </script>
 ```
+#### 结合jquery
+```
+ref="demo"    
+$(this.refs["demo"]).xxx  
+```
+组件内节点   
+ref="类似id"    
+this.refs['name']=>原生     
+__Drag Demo__
+1. 结合document.onmousemove/onmouseup等函数   
+在MouseDown时传入点击方框的相对坐标，通过移动move时的page_xy坐标减去相对坐标，计算生成方框的坐标x/y
+2. ref="demo"   
+
+__From 操作__
+__层级关系 事件冒泡__
+
 ### react特征
 __active state__
 - constructor this.state={xxx}
@@ -64,4 +80,4 @@ __active state__
 4. componentDidUpdate() 更新之后
 5. componentWillUnmount() 卸载之前  
 __(没有didUnmount)__
-6. componentWillReceiveProps() 组件的参数已经更新
+6. componentWillReceiveProps() 组件的参数已经更新   
