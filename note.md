@@ -66,8 +66,45 @@ __From 操作__
 __层级关系 事件冒泡__
 
 #### 组件间通信
-
+- 父子级间通信
+1. 回调函数 子通过this.function.bind(this)传到父
+2. emit
+3. 
 ### webpack
+- 问题
+1. babel 实时编译
+2. 测试复杂
+3. 自己搭建服务器
+4. 没有热更新
+- webpack脚手架配置
+```
+npm install -g webpack #webpack的cli环境
+npm install -g webpack-dev-server #webpack server环境
+#各种依赖库]
+# webpack本身
+npm install webpack -D   # webpack本地依赖
+npm install webpack-dev-server -D #webpack服务器本地依赖
+# babel相关
+npm install babel-core -D #后台编译工具
+npm install babel-perset-es2015 -D #babel对ES2015的预设
+npm install babel-loader -D #babel模块的加载器
+# babel-react预设
+npm install babel-preset-react -D #babel-react预设
+# react
+npm install react -D #react库本身
+npm install react-dom -D #react-dom库本身
+npm install react-hot-loader -D # react 热更新
+# 样式表相关
+npm install style-loader -D
+npm install css-loader -D
+```
+- 在package.json目录下，`npm install`即可安装所有依赖  
+3. 编写webpack的配置文件   
+- webpack.config.js   # webpack配置文件
+- .baberc     # babel预设文件
+4. 启动服务器
+- webpack : 生成bundle.js/bundle.js.map
+- webpack-dev-server --hot 本地webpack服务器，热编译更新
 ### react特征
 __active state__
 - constructor this.state={xxx}
