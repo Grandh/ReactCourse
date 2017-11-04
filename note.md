@@ -27,8 +27,8 @@ React native: 移动端原生程序
 
 ### JSX
 js语法增强-ES6可以直接放入HTML    
-需要babel编译JSX    
-**坑1**    
+需要babel编译JSX     
+**坑1**
 ```
 npm install Bower   
 bower install babel    
