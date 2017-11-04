@@ -50,7 +50,7 @@ return <div>...</div>;
 </script>
 ```
 ### react特征
-__active state
+__active state__
 - constructor this.state={xxx}
 - other this.setState()
 - onChange(this.fn.bind(this) 语法较为严格、JSX需要编译
