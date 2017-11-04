@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>输入跟随demo</title>
+		<script src="./js/browser.js" charset="utf-8"></script>
+		<script src="./js/react.development.js" charset="utf-8"></script>
+		<script src="./js/react-dom.development.js" charset="utf-8"></script>
+		<script type="text/babel">
+
+			class DemoInput extends React.Component{
+
+				constructor(){
+					super(); //超类、父类
+					this.state={value:''};
+				}
+				fn(ev){
+					this.setState({
+						value : ev.target.value,  //json格式
+					})
+				}
+				render(){ //高度面向对象
+					return <div>
+					<input type="text" onChange={this.fn.bind(this)}/>
+					<p>{this.state.value}</p>
+					</div>;
+				}
+			}
+			window.onload = function(){
+			var oDiv = document.getElementById('div1');
+				ReactDOM.render(
+				<DemoInput />,
+				oDiv
+				);
+			};
+		</script>
+
+	</head>
+	<body>
+		<div id="div1">
+		</div>
+	</body>
+</html>
+
+		
+
