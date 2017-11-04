@@ -30,7 +30,8 @@ js语法增强-ES6语法规则——HTML可以直接放入     
 需要编译 babel —— JSX      
 **坑1**：
 ```npm install Bower   
-bower install babel ```    
+bower install babel    
+```  
 学习ES6语法规则与相关的编译原理    
 1. JSX 只能有一个顶级元素（一个父元素）
 2. 模板字符串 es6 abc${xxx}    
