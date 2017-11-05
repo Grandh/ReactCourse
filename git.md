@@ -16,6 +16,6 @@
 - 切换分支   
 ```git checkout xxx```   
 - 删除分支   
-远程：```git branch -r -d xxx```（无法删除github上的branch?）      
+远程：```git branch -r -d xxx```（无法删除github上的branch?)           
 本地：```git branch -d xxx```   
 
