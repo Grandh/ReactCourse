@@ -56,7 +56,8 @@ $(this.refs["demo"]).xxx  
 ```
 组件内节点   
 ref="类似id"    
-this.refs['name']=>原生     
+this.refs['name']=>原生     
+
 __Drag Demo__
 1. 结合document.onmousemove/onmouseup等函数   
 在MouseDown时传入点击方框的相对坐标，通过移动move时的page_xy坐标减去相对坐标，计算生成方框的坐标x/y
