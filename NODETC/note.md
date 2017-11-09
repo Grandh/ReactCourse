@@ -1,0 +1,39 @@
+
+# Node.js Course
+
+source https://ke.qq.com/course/199161  
+
+## 基础知识
+Ryan Dahl 高性能web网站设计师   
+- 异步I/O   
+不能等待硬盘数据返回，否则浪费CPU阻塞，造成性能浪费
+RD-单线程、事件驱动与异步I/O实现  
+- V8  chrome js解析引擎
+javascript 运行于引擎上，没有独立编码能力——脚本语言   
+RD 移植V8引擎到服务器，通过双向请求设立服务  
+没有同步I/O，不会出现同步I/O导致事件循环性能降低  
+性能好，超过python、ruby等语言
+闭包特性方便，比c中的回调函数好用（作用域）  
+- node 2009.05  
+node.js为提高性能
+
+### 配置
+- 为各个平台提供安装包与源代码
+- node -v
+
+### node.js性质
+- node 是后台语言    
+php/jsp/asp/python   
+- 前端语言   
+运行在浏览器上的就是前端语言：html/js/css(用户可见)  
+- 没有根目录  
+apache 有根目录，能自动获得HTTP URL地址；即提供静态资源服务；PHP构建在Apache之上   
+nodejs 与经典LAMP不同，不用构建在任何服务器软件之上  
+如何解决没有根目录的问题
+- 模块   
+借助fs模块读取文件内容，通过异步回调函数操作
+- 顶层路由设计
+
+
+  
+
