@@ -12,6 +12,12 @@ var server = http.createServer(function(req,res){
                 res.end(data.toString());
             });  //异步读取文件
             break;
+        case "/dog.pic":
+            fs.readFile("./image/dog.png",function(err,data){
+                res.setHeader("Content-Type","image/png")
+                res.end(data);
+            })
+            break;
         default:
             console.log("hello");
             res.end("对不起，没有这个页面");
