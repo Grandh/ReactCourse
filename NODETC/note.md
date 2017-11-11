@@ -50,13 +50,46 @@ I/O操作是切换点，服务源计算不是异步
 - 事件环 Event-driven    
 一个时刻只能执行一个事件回调函数，但是事件回调函数中途可以执行其他事件  
 __以上是三个特点__：三者相辅相成
-### Node.js适合开发
+#### Node.js适合开发
 1. 大量并发IO   
 2. 配合web socket，开发长连接的实时交互程序   
 3. 例如：用户表单、聊天室、图文直播、提供JSON接口的API   
-### 缺点
+#### 缺点
 性能高，但是缺少很多服务器的健壮性
 中小系统利用node开发、成熟企业用于开发某一方面的内容
+
+### Node.js实践
+- GET 请求   
+通过URL的？querystring来传递参数，不安全，能传递的内容少，方便分享网址   
+GET请求：利用module url解析网址，通过parse解析query部分，得到querstring   
+或者利用querystring模块，专门处理字符串型的querystring输入，转为json   
+node.js/doc/node querystirng.stringify
+- POST请求   
+通过上行报文的报文体来传递参数，安全，传递的内容多，但不方便分享   
+可以实现图片、音频等；POST通常用来传递大量的内容，nodejs可能会被堵塞，但是其会将较大的内容分成包传输，在包传递完后找到切换点，nodejs就可以给其他的事件提供服务，因此post请求效率高。     
+```js
+    req.on("data",function(chunk){ 
+        //将小包传入大结果中
+    });
+    req.on("end",function(){
+        //接受完数据后返回的结果
+    });
+```
+- 自定义模块   
+1. require后直接执行其中的程序    
+2. 作用域独立，不能跨包（输出不了window对象）   
+3. __向外暴露__ exports   
+4. 约定：引用的包的名称作为变量     
+5. moudle.exports 暴露单独的结构   
+6. 连续require， node会自动阻止环状引用    
+7. 与MVC分层有关，分离功能函数（独立逻辑体系将业务进行分割）
+
+- node_moudles文件夹    
+
+引用该文件夹下的js文件可以不用指定文件路径   
+node_modules文件夹中创建一个新的文件夹，调用其中的index.js可以直写该文件名    
+同级回溯功能，在项目的母目录中都可以。   
+
 
 
 
