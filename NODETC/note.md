@@ -90,10 +90,24 @@ node.js/doc/node querystirng.stringify
 node_modules文件夹中创建一个新的文件夹，调用其中的index.js可以直写该文件名    
 同级回溯功能，在项目的母目录中都可以。   
 
+- npm
+
+node package management node.js包管理器   
+https://www.npmjs.com   
+github可能有包含业务项目，npm和业务独立，组成了互相引用生态：分享轮子而非重复工作   
+测试：使用成熟的接口开发自身的个性化项目   
 
 
+- package.json 依赖文件
 
-
+npm init 创建package.json文件
+entry point:
+test command: 测试命令
+git repository: git 仓库  
+其中没有所谓的依赖项目，在安装任何包的时候，记得加上-save ,会自动加上依赖文件，之后npm install 会自动安装所有依赖
+开始一个项目，从init开始  
+-g 参数，在全局一般安装的是cli，command line interface    
+查看自己的全局路径``` npm root -g ```   
 
   
 
